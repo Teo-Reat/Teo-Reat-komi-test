@@ -1,0 +1,376 @@
+.index-main {
+  position: relative;
+  z-index: 1;
+  .wrapper {
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.slides {
+  position: relative;
+  height: 500px;
+  margin: 0;
+}
+
+.slide {
+  list-style-type: none;
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+.slide1, .slide2, .slide3 {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.slide1 {
+  background: url("../images/slide1.jpg") center no-repeat;
+}
+
+.slide2 {
+  background: url("../images/slide2.jpg") center no-repeat;
+}
+
+.slide3 {
+  background: url("../images/slide3.jpg") center no-repeat;
+}
+
+.slide-description {
+  width: 960px;
+  position: absolute;
+  left: 50%;
+  margin-left: -480px;
+  bottom: 90px;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  p {
+    font-family: OpenSans-ExtraBold, "Arial Black", sans-serif;
+    font-size: 30px;
+    width: 380px;
+    color: #ffffff;
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+}
+
+.showing {
+  z-index: 2;
+}
+
+.our-services {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.services-first-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+  .our-services-descriprion {
+    font-family: OpenSans-ExtraBold, "Arial Black", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background: @red;
+      height: 3px;
+      width: 80px;
+      top: 60px;
+    }
+  }
+}
+
+.our-services-image {
+  position: relative;
+  img {
+    margin-right: 10px;
+  }
+  .services-title {
+    background: url("../images/section_title.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    display: inline-block;
+    bottom: 55px;
+    left: 0;
+    width: 360px;
+    height: 40px;
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 40px;
+    padding-left: 20px;
+  }
+}
+
+.services-second-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 18px 0 90px;
+  position: relative;
+  .our-services-image {
+    width: 300px;
+  }
+  .services-title {
+    background: url("../images/section_title.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    display: inline-block;
+    bottom: 4px;
+    width: 210px;
+    height: 24px;
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 24px;
+    padding-left: 20px;
+  }
+}
+
+.services-third-row {
+  margin-bottom: 87 + 25px;
+  .services-text {
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-size: 13px;
+  }
+}
+
+.our-advantages {
+  background: @brown;
+  position: relative;
+  color: #ffffff;
+  .stub {
+    position: absolute;
+    height: 25px;
+    width: 30%;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      right: -18px;
+      border-top: 25px solid #ffffff;
+      border-right: 18px solid transparent;
+      z-index: 1;
+    }
+  }
+  .stub2 {
+    position: absolute;
+    height: 25px;
+    width: 30%;
+    right: 0;
+    bottom: 0;
+    background: @grey;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: -18px;
+      bottom: 0;
+      border-bottom: 25px solid @grey;
+      border-left: 18px solid transparent;
+      z-index: 1;
+    }
+  }
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 90px;
+  }
+}
+
+.advantages-first-row {
+  .our-advantages-description {
+    font-family: OpenSans-ExtraBold, "Arial Black", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background: @red;
+      height: 3px;
+      width: 80px;
+      top: 60px;
+    }
+  }
+}
+
+.advantages-second-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 0 110px 0;
+  .advantages {
+    width: 230px;
+    text-align: center;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    strong {
+      font-family: OpenSans-Bold, "Arial Black", sans-serif;
+      font-size: 16px;
+      display: inline-block;
+      margin: 30px 0 20px;
+
+    }
+    p {
+      font-family: OpenSans-Regular, Arial, sans-serif;
+      font-size: 13px;
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.how-to-organize {
+  background: @grey;
+  position: relative;
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 90px;
+  }
+}
+
+.how-to-first-row {
+  .how-to-description {
+    font-family: OpenSans-ExtraBold, "Arial Black", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background: @red;
+      height: 3px;
+      width: 80px;
+      top: 60px;
+    }
+  }
+}
+
+.how-to-second-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 0 90px 0;
+  .how-to {
+    width: 230px;
+    text-align: center;
+    position: relative;
+    &::after {
+      content: '\2192';
+      font-size: 25px;
+      position: absolute;
+      top: 30px;
+      right: 0;
+    }
+    &:last-child::after {
+      content: '';
+    }
+    img {
+      display: block;
+      position: absolute;
+      overflow: auto;
+      margin: auto;
+      top: -120px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    strong {
+      font-family: OpenSans-Bold, "Arial Black", sans-serif;
+      font-size: 16px;
+      display: inline-block;
+      margin: 90px 0 20px;
+
+    }
+    p {
+      font-family: OpenSans-Regular, Arial, sans-serif;
+      font-size: 13px;
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+  a {
+    color: #518a32;
+  }
+}
+
+.our-fleet-of-vehicles {
+  //background: #ffffff;
+  position: relative;
+  //color: #ffffff;
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 90px;
+  }
+}
+
+.our-fleet-first-row {
+  .our-fleet-description {
+    font-family: OpenSans-ExtraBold, "Arial Black", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background: @red;
+      height: 3px;
+      width: 80px;
+      top: 60px;
+    }
+  }
+}
+
+.our-fleet-second-row, .our-fleet-third-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 55px 0 50px;
+  position: relative;
+}
+
+.our-fleet {
+  position: relative;
+  .our-fleet-weight, .our-fleet-character {
+    background: url("../images/vehicle1.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 24px;
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 24px;
+    padding-left: 20px;
+    z-index: 2;
+  }
+  .our-fleet-character {
+    background: url("../images/vehicle2.png") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 95px;
+    width: 260px;
+    padding-left: 40px;
+    z-index: 1;
+  }
+}
+
+.our-fleet-third-row {
+  margin: 18px 0 90px;
+}

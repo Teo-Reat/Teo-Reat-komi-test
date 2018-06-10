@@ -1,0 +1,230 @@
+.main-header {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    height: 130px;
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: @grey;
+  }
+  &::after {
+    content: '';
+    display: block;
+    height: 50px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: @brown;
+  }
+  .wrapper {
+    height: 170px;
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.header-first-row {
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    background: @grey;
+    display: flex;
+    position: relative;
+    width: 275px;
+    height: 130px;
+    .logo-img {
+      padding: 20px 18px 20px 19px;
+    }
+    .logo-title {
+      font-family: Arial, sans-serif;
+      font-size: 25px;
+      text-transform: uppercase;
+      padding-top: 40px;
+      color: @brown;
+      position: relative;
+      z-index: 2;
+    }
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      right: 18px;
+      border-top: 130px solid @grey;
+      border-right: 92px solid transparent;
+      z-index: 1;
+    }
+  }
+}
+
+.header-first-row {
+  .header-contacts {
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.header-contacts {
+  padding-top: 50px;
+  .header-telephone, .header-mail {
+    font-family: OpenSans-Bold, Arial, sans-serif;
+    font-size: 16px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      left: -30px;
+    }
+  }
+  .header-telephone::before {
+    background: url("../images/phone.png");
+  }
+  .header-mail::before {
+    background: url("../images/mail.png") no-repeat;
+    top: 3px;
+  }
+  .feedback-button {
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-size: 13px;
+    position: relative;
+    right: 10px;
+    top: -10px;
+    height: 40px;
+    border: 1px solid @brown;
+    border-radius: 2px;
+    background: transparent;
+    color: @brown;
+    width: 150px;
+    &:active {
+      background: @brown;
+      color: #ffffff;
+      border: #ffffff;
+    }
+  }
+}
+
+.main-nav {
+  margin-left: auto;
+  background: @brown;
+  height: 50px;
+  width: 650px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -34px;
+    bottom: 0;
+    border-bottom: 50px solid @brown;
+    border-left: 35px solid transparent;
+    z-index: 1;
+  }
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  margin: 0;
+  .main-nav-item {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    &:hover::after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 3px;
+      left: 20px;
+      right: 130px;
+      background: @red;
+      z-index: 10;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 24px;
+      right: 0;
+      background: #4e2020;
+      top: 13px;
+    }
+    &:last-child::before {
+      background: @brown;
+    }
+    a {
+      font-family: OpenSans-Regular, Arial, sans-serif;
+      font-size: 13px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      height: 100%;
+      line-height: 50px;
+    }
+  }
+}
+
+.dropdown-one, .dropdown-two {
+  .main-nav-a {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url("../images/drop_menu_icon.png");
+      width: 8px;
+      height: 5px;
+      right: -15px;
+      top: 24px;
+    }
+  }
+}
+
+.dropdown-one-item, .dropdown-two-item {
+  position: absolute;
+  background: white;
+  width: 280px;
+  z-index: 5;
+}
+
+.dropdown-ul {
+  margin: 15px 0;
+  .about-dropdown {
+    text-align: left;
+    list-style-type: none;
+    position: relative;
+    &::before {
+      content: '>';
+      font-family: Bahnschrift, sans-serif;
+      position: absolute;
+      left: 20px;
+      top: 11px;
+    }
+    &:hover {
+      background: #cccccc;
+    }
+    a {
+      margin-left: 40px;
+      color: #000;
+      line-height: 40px;
+      display: inline-block;
+    }
+  }
+}
